@@ -50,7 +50,7 @@ public class Antifraud{
         In batch = new In(args[0]);                    
         getBatch(batch);
         int num_vertices = Collections.max(vertices);
-		Network G = new Network(num_vertices + 1, edges);
+	Network G = new Network(num_vertices + 1, edges);
         In stream = new In(args[1]);                 
         
         writers = new ArrayList<Out>(); 
