@@ -18,14 +18,13 @@ public class Antifraud{
 	private static Set <Integer> vertices = new HashSet<Integer>();
 	private static Set <String> edges = new HashSet<String>();
 
-
     /**
      * read input batch payment datastream, scans for vertices and edges, 
      * and add to Set vertices and edges.
      * @param  In inputstream
      */
 
-	public static void scanBatch(In input){
+	public static void getBatch(In input){
         input.readLine();       //skip header
         while (input.hasNextLine()) {
             String str = input.readLine();
@@ -49,7 +48,7 @@ public class Antifraud{
     	String trust;
 
         In batch = new In(args[0]);                    
-        scanBatch(batch);
+        getBatch(batch);
         int num_vertices = Collections.max(vertices);
 		Network G = new Network(num_vertices + 1, edges);
         In stream = new In(args[1]);                 

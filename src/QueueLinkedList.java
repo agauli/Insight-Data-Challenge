@@ -33,7 +33,6 @@ public class QueueLinkedList<Data> implements Iterable<Data> {
         return head == null;
     }
 
-
     /**
      * Adds the data to this queue. parameter is i
      */
@@ -57,14 +56,13 @@ public class QueueLinkedList<Data> implements Iterable<Data> {
         Data dataitem = head.dataitem;
         head = head.next;
         n--;
-        if (isEmpty()) tail = null;   // to avoid loitering
+        if (isEmpty()) tail = null;   // lets avoid loitering
         return dataitem;
     }
 
     public Iterator<Data> iterator()  {
         return new ListIterator<Data>(head);  
     }
-
 
     private class ListIterator<Data> implements Iterator<Data> {
         private Node<Data> current;
