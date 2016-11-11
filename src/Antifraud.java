@@ -10,6 +10,9 @@ import java.util.List;
  *                output1.txt output2.txt output3.txt
  *  Dependencies: BreadthFirstSearch.java Bag.java QueueLinkedList.java 
  *                In.java Out.java Network.java
+ *  detect fradulent transactions based on degree in Breadth Search First
+ *  data structure.
+ *
  *************************************************************************
  *   
  */
