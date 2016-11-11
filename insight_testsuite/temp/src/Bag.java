@@ -22,16 +22,15 @@ public class Bag<Data> implements Iterable<Data> {
         size = 0;
     }
 
-    // return true if bag is empty 
-
-    public boolean isEmpty() {
-        return head == null;
-    }
-
+    
     // Returns the number of dataitems in this bag.
-
     public int size() {
         return size;
+    }
+
+    // return true if bag is empty 
+    public boolean isEmpty() {
+        return head == null;
     }
 
     // Adds the dataitem to this bag.

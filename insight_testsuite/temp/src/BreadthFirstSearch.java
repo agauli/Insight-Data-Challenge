@@ -18,7 +18,7 @@ public class BreadthFirstSearch {
     /* Constructor
     */
     
-    public BreadthFirstSearch(Graph G, int s, int d) {
+    public BreadthFirstSearch(Network G, int s, int d) {
         visited = new boolean[G.V()];
         distanceTo = new int[G.V()]; 
         present = new boolean[MAXDEGREE];
@@ -30,7 +30,7 @@ public class BreadthFirstSearch {
      *
     */
 
-    private void bfs(Graph G, int s, int d) {
+    private void bfs(Network G, int s, int d) {
         QueueLinkedList<Integer> q = new QueueLinkedList<Integer>();
         for (int vertex = 0; vertex < G.V(); vertex++)
              distanceTo[vertex] = INFINITY;
@@ -68,7 +68,6 @@ public class BreadthFirstSearch {
         degree[2] = present[3];
         return degree;
     }
-
 
 }
 
